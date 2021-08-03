@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
+import csv
 
 PATH = "C:\\Users\\Kornélia\\Desktop\\PM Automata Tesztelő\\chromedriver_win32\\chromedriver.exe"
 URL = "http://localhost:1667/"
@@ -74,13 +75,38 @@ article1_url = "http://localhost:1667/#/articles/hello-world"
 article1_title_check = driver.find_element_by_xpath('//h1')
 assert article1_title_check.text == "Hello World!"
 
-edit_icon = driver.find_element_by_class_name("ion-edit")
-delete_icon = driver.find_element_by_class_name("ion-trash-a")
 comment_text = driver.find_element_by_xpath('//textarea[@placeholder="Write a comment..."]')
 post_comment_btn = driver.find_element_by_xpath('//button[text()="Post Comment"]')
+with open('comments.txt', 'r', encoding='UTF-8') as comments:
+    for row in comments:
+        comment_text.send_keys(row)
+        post_comment_btn.click()
+
+# edit_icon = driver.find_element_by_class_name("ion-edit")
+# time.sleep(2)
+# edit_icon.click()
+# time.sleep(2)
+# tag3_delete = driver.find_elements_by_xpath("//i[@class='ion-trash-a']")[0]
+# time.sleep(2)
+# tag3_delete.click()
+# publish_btn = driver.find_element_by_xpath('//button[contains(text(),"Publish")]')
+# publish_btn.click()
+
+
+delete_icon = driver.find_element_by_class_name("ion-trash-a")
+delete_icon.click()
+time.sleep(2)
+
+popular_tags = driver.find_elements_by_xpath('//div[a[@class="tag-pill tag-default"]]')
+with open('tags.csv', 'w', encoding="UTF-8") as tag_file:
+    for tag in popular_tags:
+        tag_file.write(tag.text)
+        tag_file.write("\n")
 
 page_link2 = driver.find_element_by_xpath('//a[text()="2"]')
-
+page_link2.click()
+# tags: '//a[@class="tag-pill tag-default"]'
+# popular tags '//div[a[@class="tag-pill tag-default"]]'
 
 # logout_btn = driver.find_element_by_class_name("ion-android-exit")
 # logout_btn.click()
