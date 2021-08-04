@@ -19,6 +19,7 @@ accept_btn = driver.find_element_by_xpath('//button[contains(@class, "accept")]'
 time.sleep(2)
 accept_btn.click()
 time.sleep(2)
+assert driver.find_elements_by_xpath('//button') == []
 
 # sign_up_link = driver.find_element_by_xpath('//a[@href="#/register"]')
 # time.sleep(2)
@@ -51,10 +52,12 @@ email_input.send_keys("tk1709@mail.com")
 password_input.send_keys("TKpass1709")
 sign_in_btn = driver.find_element_by_xpath('//button[contains(text(),"Sign in")]')
 sign_in_btn.click()
+time.sleep(2)
+assert driver.find_element_by_xpath('//a[contains(text(),"TKori")]').is_displayed()
 
 new_article_link = WebDriverWait(driver, 10).until(
-            EC.visibility_of_element_located((By.XPATH, '//a[@href="#/editor"]'))
-        )
+    EC.visibility_of_element_located((By.XPATH, '//a[@href="#/editor"]'))
+)
 new_article_link.click()
 time.sleep(2)
 article_title = driver.find_element_by_xpath('//input[@placeholder="Article Title"]')
@@ -72,6 +75,8 @@ for tag in article1_tags:
 publish_btn.click()
 time.sleep(2)
 article1_url = "http://localhost:1667/#/articles/hello-world"
+article1_url = "http://localhost:1667/#/articles/hello-world"
+assert driver.current_url == article1_url
 article1_title_check = driver.find_element_by_xpath('//h1')
 assert article1_title_check.text == "Hello World!"
 
@@ -81,6 +86,10 @@ with open('comments.txt', 'r', encoding='UTF-8') as comments:
     for row in comments:
         comment_text.send_keys(row)
         post_comment_btn.click()
+
+time.sleep(2)
+comment_list = driver.find_elements_by_class_name("card-text")
+assert comment_list != []
 
 # edit_icon = driver.find_element_by_class_name("ion-edit")
 # time.sleep(2)
@@ -96,6 +105,8 @@ with open('comments.txt', 'r', encoding='UTF-8') as comments:
 delete_icon = driver.find_element_by_class_name("ion-trash-a")
 delete_icon.click()
 time.sleep(2)
+deleted_post_url = driver.current_url
+assert deleted_post_url == "http://localhost:1667/#/"
 
 popular_tags = driver.find_elements_by_xpath('//div[a[@class="tag-pill tag-default"]]')
 with open('tags.csv', 'w', encoding="UTF-8") as tag_file:
@@ -105,13 +116,16 @@ with open('tags.csv', 'w', encoding="UTF-8") as tag_file:
 
 page_link2 = driver.find_element_by_xpath('//a[text()="2"]')
 page_link2.click()
-# tags: '//a[@class="tag-pill tag-default"]'
-# popular tags '//div[a[@class="tag-pill tag-default"]]'
+page2_check = driver.find_elements_by_xpath('//li[@data-test]')[1]
+assert page2_check.get_attribute("class") == "page-item active"
 
 # logout_btn = driver.find_element_by_class_name("ion-android-exit")
 # logout_btn.click()
+# time.sleep(2)
+# assert sign_in_link.is_displayed()
 
-
+# tags: '//a[@class="tag-pill tag-default"]'
+# popular tags '//div[a[@class="tag-pill tag-default"]]'
 
 # settings = driver.find_element_by_xpath('//a[@href="#/settings"]')
 # settings.click()
