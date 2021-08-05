@@ -68,9 +68,9 @@ class TestConduit(object):
         sign_in_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Sign in")]')
         sign_in_btn.click()
 
-    def test_logout(self):
-        self.test_sign_in()
-        logout_btn = WebDriverWait(self.driver, 10).until(
-            EC.visibility_of_element_located((By.CLASS_NAME, "ion-android-exit"))
-        )
-        logout_btn.click()
+    # def test_logout(self):
+    #     self.test_sign_in()
+    #     logout_btn = WebDriverWait(self.driver, 10).until(
+    #         EC.visibility_of_element_located((By.CLASS_NAME, "ion-android-exit"))
+    #     )
+    #     logout_btn.click()
