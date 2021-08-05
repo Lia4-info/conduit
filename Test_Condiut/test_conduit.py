@@ -48,14 +48,14 @@ class TestConduit(object):
         password_input.send_keys("Kori")
         sign_up_btn = self.driver.find_element_by_class_name("btn btn-lg btn-primary pull-xs-right")
         sign_up_btn.click()
-        time.sleep(2)
-        welcome = WebDriverWait(self.driver, 10).until(
-            EC.visibility_of_element_located((By.CLASS_NAME, "swal-title"))
-        )
-        assert welcome.text == "Welcome!"
-        welcome_ok_btn = self.driver.find_element_by_xpath('//button[text()="OK"]')
-        welcome_ok_btn.click()
-        time.sleep(2)
+        # time.sleep(2)
+        # welcome = WebDriverWait(self.driver, 10).until(
+        #     EC.visibility_of_element_located((By.CLASS_NAME, "swal-title"))
+        # )
+        # assert welcome.text == "Welcome!"
+        # welcome_ok_btn = self.driver.find_element_by_xpath('//button[text()="OK"]')
+        # welcome_ok_btn.click()
+        # time.sleep(2)
 
     def test_sign_in(self):
         self.test_accept_cookies()
