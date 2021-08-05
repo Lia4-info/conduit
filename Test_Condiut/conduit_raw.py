@@ -9,10 +9,16 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 import csv
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 
-PATH = "C:\\Users\\Kornélia\\Desktop\\PM Automata Tesztelő\\chromedriver_win32\\chromedriver.exe"
+browser_options = Options()
+browser_options.headless = True
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
+
+# PATH = "C:\\Users\\Kornélia\\Desktop\\PM Automata Tesztelő\\chromedriver_win32\\chromedriver.exe"
 URL = "http://localhost:1667/"
-driver = webdriver.Chrome(PATH)
+# driver = webdriver.Chrome(PATH)
 
 driver.get(URL)
 accept_btn = driver.find_element_by_xpath('//button[contains(@class, "accept")]')
@@ -52,8 +58,10 @@ email_input.send_keys("tk1709@mail.com")
 password_input.send_keys("TKpass1709")
 sign_in_btn = driver.find_element_by_xpath('//button[contains(text(),"Sign in")]')
 sign_in_btn.click()
-time.sleep(2)
-assert driver.find_element_by_xpath('//a[contains(text(),"TKori")]').is_displayed()
+user_signed_in = WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//a[contains(text(),"TKori")]'))
+        )
+assert user_signed_in.is_displayed()
 
 new_article_link = WebDriverWait(driver, 10).until(
     EC.visibility_of_element_located((By.XPATH, '//a[@href="#/editor"]'))
@@ -75,7 +83,6 @@ for tag in article1_tags:
 publish_btn.click()
 time.sleep(2)
 article1_url = "http://localhost:1667/#/articles/hello-world"
-article1_url = "http://localhost:1667/#/articles/hello-world"
 assert driver.current_url == article1_url
 article1_title_check = driver.find_element_by_xpath('//h1')
 assert article1_title_check.text == "Hello World!"
@@ -91,16 +98,18 @@ time.sleep(2)
 comment_list = driver.find_elements_by_class_name("card-text")
 assert comment_list != []
 
-# edit_icon = driver.find_element_by_class_name("ion-edit")
-# time.sleep(2)
-# edit_icon.click()
-# time.sleep(2)
-# tag3_delete = driver.find_elements_by_xpath("//i[@class='ion-trash-a']")[0]
-# time.sleep(2)
-# tag3_delete.click()
-# publish_btn = driver.find_element_by_xpath('//button[contains(text(),"Publish")]')
-# publish_btn.click()
-
+time.sleep(2)
+edit_icon = driver.find_element_by_class_name("ion-edit")
+edit_icon.click()
+time.sleep(2)
+tag3_delete = driver.find_elements_by_xpath('//i[@class="ti-icon-close"]')[2]
+time.sleep(2)
+tag3_delete.click()
+publish_btn = driver.find_element_by_xpath('//button[contains(text(),"Publish")]')
+publish_btn.click()
+time.sleep(2)
+tag_list = driver.find_elements_by_xpath('//a[@class="tag-pill tag-default"]')
+assert len(tag_list) == 2
 
 delete_icon = driver.find_element_by_class_name("ion-trash-a")
 delete_icon.click()

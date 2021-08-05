@@ -8,12 +8,18 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
+import csv
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 
 class TestConduit(object):
     def setup(self):
-        self.driver = webdriver.Chrome(
-            "C:\\Users\\Kornélia\\Desktop\\PM Automata Tesztelő\\chromedriver_win32\\chromedriver.exe")
+        browser_options = Options()
+        browser_options.headless = True
+        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
+        # self.driver = webdriver.Chrome("C:\\Users\\Kornélia\\Desktop\\PM Automata Tesztelő\\chromedriver_win32\\chromedriver.exe")
         self.driver.get("http://localhost:1667/")
 
     def teardown(self):
