@@ -1,0 +1,86 @@
+{
+  "uid" : "cb8c301e53093502",
+  "name" : "test_add_comments",
+  "fullName" : "Test_Condiut.test_conduit.TestConduit#test_add_comments",
+  "historyId" : "ad4ffc3c2032a3e26ebb62c01de93bf7",
+  "time" : {
+    "start" : 1628179662936,
+    "stop" : 1628179663101,
+    "duration" : 165
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert [<selenium.we...6bba9fa446\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"9f1e1f6ced1dd3638e90139e6cd6fa11\", element=\"dae13c59-c2be-4458-aef0-361a735c928f\")>\n  Use -v to get the full diff",
+  "statusTrace" : "self = <test_conduit.TestConduit object at 0x7f56a7e44dc0>\n\n    def test_add_comments(self):\n>       self.test_create_article()\n\nTest_Condiut/test_conduit.py:126: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nTest_Condiut/test_conduit.py:100: in test_create_article\n    self.test_sign_in()\nTest_Condiut/test_conduit.py:58: in test_sign_in\n    self.test_accept_cookies()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <test_conduit.TestConduit object at 0x7f56a7e44dc0>\n\n    def test_accept_cookies(self):\n        self.driver.maximize_window()\n        accept_btn = self.driver.find_element_by_xpath('//button[contains(@class,\"accept\")]')\n        accept_btn.click()\n>       assert self.driver.find_elements_by_xpath('//button') == []\nE       assert [<selenium.we...6bba9fa446\")>] == []\nE         Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"9f1e1f6ced1dd3638e90139e6cd6fa11\", element=\"dae13c59-c2be-4458-aef0-361a735c928f\")>\nE         Use -v to get the full diff\n\nTest_Condiut/test_conduit.py:33: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert [<selenium.we...6bba9fa446\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"9f1e1f6ced1dd3638e90139e6cd6fa11\", element=\"dae13c59-c2be-4458-aef0-361a735c928f\")>\n  Use -v to get the full diff",
+    "statusTrace" : "self = <test_conduit.TestConduit object at 0x7f56a7e44dc0>\n\n    def test_add_comments(self):\n>       self.test_create_article()\n\nTest_Condiut/test_conduit.py:126: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nTest_Condiut/test_conduit.py:100: in test_create_article\n    self.test_sign_in()\nTest_Condiut/test_conduit.py:58: in test_sign_in\n    self.test_accept_cookies()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <test_conduit.TestConduit object at 0x7f56a7e44dc0>\n\n    def test_accept_cookies(self):\n        self.driver.maximize_window()\n        accept_btn = self.driver.find_element_by_xpath('//button[contains(@class,\"accept\")]')\n        accept_btn.click()\n>       assert self.driver.find_elements_by_xpath('//button') == []\nE       assert [<selenium.we...6bba9fa446\")>] == []\nE         Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"9f1e1f6ced1dd3638e90139e6cd6fa11\", element=\"dae13c59-c2be-4458-aef0-361a735c928f\")>\nE         Use -v to get the full diff\n\nTest_Condiut/test_conduit.py:33: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "c41387e619dbd7b8",
+      "name" : "log",
+      "source" : "c41387e619dbd7b8.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "790e476b793be274",
+      "name" : "stderr",
+      "source" : "790e476b793be274.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Test_Condiut"
+  }, {
+    "name" : "suite",
+    "value" : "test_conduit"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestConduit"
+  }, {
+    "name" : "host",
+    "value" : "fv-az77-838"
+  }, {
+    "name" : "thread",
+    "value" : "3723-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "Test_Condiut.test_conduit"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "cb8c301e53093502.json",
+  "parameterValues" : [ ]
+}

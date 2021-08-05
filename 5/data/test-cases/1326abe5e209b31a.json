@@ -1,0 +1,86 @@
+{
+  "uid" : "1326abe5e209b31a",
+  "name" : "test_sign_up",
+  "fullName" : "Test_Condiut.test_conduit.TestConduit#test_sign_up",
+  "historyId" : "6f3f8aa6d841aec17ed3b359e8c43822",
+  "time" : {
+    "start" : 1628179641592,
+    "stop" : 1628179641751,
+    "duration" : 159
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert [<selenium.we...f08748cfd0\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"c4bd8b093903f9f84848c45199a51a5a\", element=\"5e3eb91b-9fc8-4f07-a7cd-0102f3c62697\")>\n  Use -v to get the full diff",
+  "statusTrace" : "self = <test_conduit.TestConduit object at 0x7f56a78e5ac0>\n\n    def test_sign_up(self):\n>       self.test_accept_cookies()\n\nTest_Condiut/test_conduit.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <test_conduit.TestConduit object at 0x7f56a78e5ac0>\n\n    def test_accept_cookies(self):\n        self.driver.maximize_window()\n        accept_btn = self.driver.find_element_by_xpath('//button[contains(@class,\"accept\")]')\n        accept_btn.click()\n>       assert self.driver.find_elements_by_xpath('//button') == []\nE       assert [<selenium.we...f08748cfd0\")>] == []\nE         Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"c4bd8b093903f9f84848c45199a51a5a\", element=\"5e3eb91b-9fc8-4f07-a7cd-0102f3c62697\")>\nE         Use -v to get the full diff\n\nTest_Condiut/test_conduit.py:33: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert [<selenium.we...f08748cfd0\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"c4bd8b093903f9f84848c45199a51a5a\", element=\"5e3eb91b-9fc8-4f07-a7cd-0102f3c62697\")>\n  Use -v to get the full diff",
+    "statusTrace" : "self = <test_conduit.TestConduit object at 0x7f56a78e5ac0>\n\n    def test_sign_up(self):\n>       self.test_accept_cookies()\n\nTest_Condiut/test_conduit.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <test_conduit.TestConduit object at 0x7f56a78e5ac0>\n\n    def test_accept_cookies(self):\n        self.driver.maximize_window()\n        accept_btn = self.driver.find_element_by_xpath('//button[contains(@class,\"accept\")]')\n        accept_btn.click()\n>       assert self.driver.find_elements_by_xpath('//button') == []\nE       assert [<selenium.we...f08748cfd0\")>] == []\nE         Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"c4bd8b093903f9f84848c45199a51a5a\", element=\"5e3eb91b-9fc8-4f07-a7cd-0102f3c62697\")>\nE         Use -v to get the full diff\n\nTest_Condiut/test_conduit.py:33: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "3aa37067ff13ab70",
+      "name" : "log",
+      "source" : "3aa37067ff13ab70.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "fa8d015dcc60f9e5",
+      "name" : "stderr",
+      "source" : "fa8d015dcc60f9e5.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Test_Condiut"
+  }, {
+    "name" : "suite",
+    "value" : "test_conduit"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestConduit"
+  }, {
+    "name" : "host",
+    "value" : "fv-az77-838"
+  }, {
+    "name" : "thread",
+    "value" : "3723-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "Test_Condiut.test_conduit"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "1326abe5e209b31a.json",
+  "parameterValues" : [ ]
+}
