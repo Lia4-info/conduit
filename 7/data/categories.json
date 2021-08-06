@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert [<selenium.we...d39bf4a5b3\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"06e0b651e5f2ff3a419ba7c7a59d5ca5\", element=\"2c86887c-6172-4145-bcaf-6df617c66aff\")>\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "test_accept_cookies",
+        "uid" : "ac515a8aa238c099",
+        "parentUid" : "84a2a5a7d32254fd1953316156ab0672",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628255395621,
+          "stop" : 1628255395679,
+          "duration" : 58
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "84a2a5a7d32254fd1953316156ab0672"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
