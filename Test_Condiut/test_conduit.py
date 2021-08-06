@@ -170,7 +170,7 @@ class TestConduit(object):
     def test_logout(self):
         conduit_sign_up(self.driver)
         logout_btn = WebDriverWait(self.driver, 15).until(
-            EC.visibility_of_element_located((By.XPATH, '//a[@active-class="active"]'))
+            EC.visibility_of_element_located((By.XPATH, '//i[@class="ion-android-exit"]'))
         )
         logout_btn.click()
         sign_in_link = WebDriverWait(self.driver, 10).until(
