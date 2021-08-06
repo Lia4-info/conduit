@@ -1,0 +1,31 @@
+[ {
+  "uid" : "60c8bef2282c0533",
+  "name" : "test_accept_cookies",
+  "time" : {
+    "start" : 1628257649001,
+    "stop" : 1628257649081,
+    "duration" : 80
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e5f875ca3508a711",
+  "name" : "test_sign_up",
+  "time" : {
+    "start" : 1628257650856,
+    "stop" : 1628257655694,
+    "duration" : 4838
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "44649fa1c068cec1",
+  "name" : "test_logout",
+  "time" : {
+    "start" : 1628257657598,
+    "stop" : 1628257676462,
+    "duration" : 18864
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
