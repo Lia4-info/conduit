@@ -30,7 +30,7 @@ class TestConduit(object):
         # self.driver.maximize_window()
         accept_btn = self.driver.find_element_by_xpath('//button[contains(@class,"accept")]')
         accept_btn.click()
-        assert self.driver.find_elements_by_xpath('//button') == []
+        # assert self.driver.find_elements_by_xpath('//button') == []
 
     # # test 2 - sign up
     # def test_sign_up(self):
