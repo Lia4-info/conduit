@@ -32,27 +32,26 @@ class TestConduit(object):
         accept_btn.click()
         # assert self.driver.find_elements_by_xpath('//button') == []
 
-    # # test 2 - sign up
-    # def test_sign_up(self):
-    #     self.test_accept_cookies()
-    #     sign_up_link = self.driver.find_element_by_xpath('//a[@href="#/register"]')
-    #     sign_up_link.click()
-    #     time.sleep(2)
-    #     username_input = self.driver.find_element_by_xpath('//input[@placeholder="Username"]')
-    #     username_input.send_keys("TKori103")
-    #     email_input = self.driver.find_element_by_xpath('//input[@placeholder="Email"]')
-    #     email_input.send_keys("tkori103@mail.com")
-    #     password_input = self.driver.find_element_by_xpath('//input[@placeholder="Password"]')
-    #     password_input.send_keys("TKoriPass103")
-    #     sign_up_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Sign up")]')
-    #     sign_up_btn.click()
-    #     welcome = WebDriverWait(self.driver, 10).until(
-    #         EC.visibility_of_element_located((By.CLASS_NAME, "swal-title"))
-    #     )
-    #     assert welcome.text == "Welcome!"
-    #     welcome_ok_btn = self.driver.find_element_by_xpath('//button[text()="OK"]')
-    #     welcome_ok_btn.click()
-    #
+    # test 2 - sign up
+    def test_sign_up(self):
+        sign_up_link = self.driver.find_element_by_xpath('//a[@href="#/register"]')
+        sign_up_link.click()
+        time.sleep(2)
+        username_input = self.driver.find_element_by_xpath('//input[@placeholder="Username"]')
+        username_input.send_keys("TKori103")
+        email_input = self.driver.find_element_by_xpath('//input[@placeholder="Email"]')
+        email_input.send_keys("tkori103@mail.com")
+        password_input = self.driver.find_element_by_xpath('//input[@placeholder="Password"]')
+        password_input.send_keys("TKoriPass103")
+        sign_up_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Sign up")]')
+        sign_up_btn.click()
+        welcome = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, "swal-title"))
+        )
+        assert welcome.text == "Welcome!"
+        welcome_ok_btn = self.driver.find_element_by_xpath('//button[text()="OK"]')
+        welcome_ok_btn.click()
+
     # #test 3 - sign in
     # def test_sign_in(self):
     #     self.test_accept_cookies()
