@@ -39,11 +39,11 @@ class TestConduit(object):
         sign_up_link.click()
         time.sleep(2)
         username_input = self.driver.find_element_by_xpath('//input[@placeholder="Username"]')
-        username_input.send_keys("TKori1000")
+        username_input.send_keys("TKori1001")
         email_input = self.driver.find_element_by_xpath('//input[@placeholder="Email"]')
-        email_input.send_keys("tkori1000@mail.com")
+        email_input.send_keys("tkori1001@mail.com")
         password_input = self.driver.find_element_by_xpath('//input[@placeholder="Password"]')
-        password_input.send_keys("TKoriPass1000")
+        password_input.send_keys("TKoriPass1001")
         sign_up_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Sign up")]')
         sign_up_btn.click()
         welcome = WebDriverWait(self.driver, 10).until(
@@ -60,8 +60,8 @@ class TestConduit(object):
         sign_in_link.click()
         email_input = self.driver.find_element_by_xpath('//input[@placeholder="Email"]')
         password_input = self.driver.find_element_by_xpath('//input[@placeholder="Password"]')
-        email_input.send_keys("tkori1000@mail.com")
-        password_input.send_keys("TKoriPass1000")
+        email_input.send_keys("tkori1001@mail.com")
+        password_input.send_keys("TKoriPass1001")
         sign_in_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Sign in")]')
         sign_in_btn.click()
         user_signed_in = WebDriverWait(self.driver, 10).until(
@@ -81,7 +81,9 @@ class TestConduit(object):
     # test 5 - paginate
     def test_paginate(self):
         self.test_sign_in()
-        page_link2 = self.driver.find_element_by_xpath('//a[text()="2"]')
+        page_link2 = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//a[text()="2"]'))
+        )
         page_link2.click()
         page2_check = self.driver.find_elements_by_xpath('//li[@data-test]')[1]
         assert page2_check.get_attribute("class") == "page-item active"
@@ -102,8 +104,9 @@ class TestConduit(object):
             EC.visibility_of_element_located((By.XPATH, '//a[@href="#/editor"]'))
         )
         new_article_link.click()
-        time.sleep(2)
-        article_title = self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]')
+        article_title = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]'))
+        )
         article_about = self.driver.find_element_by_xpath('//input[@placeholder="What\'s this article about?"]')
         article_text = self.driver.find_element_by_xpath('//textarea[@placeholder="Write your article (in markdown)"]')
         enter_tags = self.driver.find_element_by_xpath('//input[@placeholder="Enter tags"]')
@@ -115,10 +118,11 @@ class TestConduit(object):
             enter_tags.send_keys(tag)
             enter_tags.send_keys(Keys.ENTER)
         publish_btn.click()
-        time.sleep(2)
-        article1_url = "http://localhost:1667/#/articles/hello-world"
-        assert self.driver.current_url == article1_url
-        article1_title_check = self.driver.find_element_by_xpath('//h1')
+        # article1_url = "http://localhost:1667/#/articles/hello-world"
+        # assert self.driver.current_url == article1_url
+        article1_title_check = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//h1'))
+        )
         assert article1_title_check.text == "Hello World!"
 
     # test 8 - add comments to article
@@ -133,28 +137,33 @@ class TestConduit(object):
         comment_list = self.driver.find_elements_by_class_name("card-text")
         assert comment_list != []
 
-    # test 9 - edit article
-    def test_edit_article(self):
-        self.test_create_article()
-        edit_icon = self.driver.find_element_by_class_name("ion-edit")
-        edit_icon.click()
-        time.sleep(2)
-        tag3_delete = self.driver.find_elements_by_xpath('//i[@class="ti-icon-close"]')[2]
-        time.sleep(2)
-        tag3_delete.click()
-        publish_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]')
-        publish_btn.click()
-        time.sleep(2)
-        tag_list = self.driver.find_elements_by_xpath('//a[@class="tag-pill tag-default"]')
-        assert len(tag_list) == 2
 
-    # test 10 - delete article
+    # test 9 - delete article
     def test_delete_article(self):
         self.test_create_article()
         delete_icon = self.driver.find_element_by_class_name("ion-trash-a")
         delete_icon.click()
+        time.sleep(2)
         deleted_post_url = self.driver.current_url
         assert deleted_post_url == "http://localhost:1667/#/"
+
+    # test 10 - edit profile_picture
+    def test_edit_profile_picture(self):
+        settings = self.driver.find_element_by_xpath('//a[@href="#/settings"]')
+        settings.click()
+        profile_picture_input = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="URL of profile picture"]'))
+        )
+        profile_picture_input.clear()
+        profile_picture_input.send_keys("https://cdn.pixabay.com/photo/2019/02/19/19/45/thumbs-up-4007573__340.png")
+        update_settings_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Update Settings")]')
+        update_settings_btn.click()
+        update_succes = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, "swal-title"))
+        )
+        assert update_succes.text == "Update successful!"
+        update_ok_btn = self.driver.find_element_by_xpath('//button[text()="OK"]')
+        update_ok_btn.click()
 
     # test 11 - logout
     def test_logout(self):
