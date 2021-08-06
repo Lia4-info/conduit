@@ -1,5 +1,14 @@
 import time
 
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+def driver_wait(driver, by, value):
+    element = WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located((by, value))
+        )
+    return element
 
 def conduit_sign_up(driver):
     sign_up_link = driver.find_element_by_xpath('//a[@href="#/register"]')
@@ -18,3 +27,10 @@ def conduit_sign_up(driver):
     time.sleep(3)
     welcome_ok_btn = driver.find_element_by_xpath('//button[text()="OK"]')
     welcome_ok_btn.click()
+
+def conduit_logout(driver):
+    conduit_sign_up(driver)
+    logout_btn = WebDriverWait(driver, 15).until(
+        EC.visibility_of_element_located((By.XPATH, '//a[@active-class="active"]'))
+    )
+    logout_btn.click()

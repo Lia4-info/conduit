@@ -27,7 +27,6 @@ class TestConduit(object):
 
     # test 1 - accept cookies
     def test_accept_cookies(self):
-        # self.driver.maximize_window()
         accept_btn = self.driver.find_element_by_xpath('//button[contains(@class,"accept")]')
         accept_btn.click()
         # assert self.driver.find_elements_by_xpath('//button') == []
@@ -53,22 +52,24 @@ class TestConduit(object):
         welcome_ok_btn.click()
 
     #test 3 - sign in
-    # def test_sign_in(self):
-    #     self.test_accept_cookies()
-    #     sign_in_link = self.driver.find_element_by_xpath('//a[@href="#/login"]')
-    #     sign_in_link.click()
-    #     email_input = self.driver.find_element_by_xpath('//input[@placeholder="Email"]')
-    #     password_input = self.driver.find_element_by_xpath('//input[@placeholder="Password"]')
-    #     email_input.send_keys("tkori103@mail.com")
-    #     password_input.send_keys("TKoriPass103")
-    #     sign_in_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Sign in")]')
-    #     sign_in_btn.click()
-    #     user_signed_in = WebDriverWait(self.driver, 10).until(
-    #         EC.visibility_of_element_located((By.XPATH, '//a[contains(text(),"TKori")]'))
-    #     )
-    #     assert user_signed_in.is_displayed()
+    def test_sign_in(self):
+        conduit_sign_up(self.driver)
+        conduit_logout(self.driver)
 
-    # # test 4 - list artiles
+        sign_in_link = self.driver.find_element_by_xpath('//a[@href="#/login"]')
+        sign_in_link.click()
+        email_input = self.driver.find_element_by_xpath('//input[@placeholder="Email"]')
+        password_input = self.driver.find_element_by_xpath('//input[@placeholder="Password"]')
+        email_input.send_keys("tkori103@mail.com")
+        password_input.send_keys("TKoriPass103")
+        sign_in_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Sign in")]')
+        sign_in_btn.click()
+        user_signed_in = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//a[contains(text(),"TKori")]'))
+        )
+        assert user_signed_in.is_displayed()
+
+    # # test 4 - list articles
     # def test_list_articles(self):
     #     self.test_sign_in()
     #     article_list = WebDriverWait(self.driver, 10).until(
@@ -80,7 +81,7 @@ class TestConduit(object):
     # # test 5 - paginate
     # def test_paginate(self):
     #     self.test_sign_in()
-    #     page_link2 = WebDriverWait(self.driver, 10).until(
+    #     page_link2 = driver_wait(self.driver, By.ID, "idname") WebDriverWait(self.driver, 10).until(
     #         EC.visibility_of_element_located((By.XPATH, '//a[text()="2"]'))
     #     )
     #     page_link2.click()
@@ -169,7 +170,7 @@ class TestConduit(object):
     def test_logout(self):
         conduit_sign_up(self.driver)
         logout_btn = WebDriverWait(self.driver, 15).until(
-            EC.visibility_of_element_located((By.XPATH, "//a[@active-class='active']"))
+            EC.visibility_of_element_located((By.XPATH, '//a[@active-class="active"]'))
         )
         logout_btn.click()
         sign_in_link = WebDriverWait(self.driver, 10).until(
