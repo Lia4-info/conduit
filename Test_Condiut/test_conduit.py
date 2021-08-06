@@ -11,7 +11,7 @@ from selenium.webdriver.common.keys import Keys
 import csv
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-
+from cond_data import *
 
 
 class TestConduit(object):
@@ -52,7 +52,7 @@ class TestConduit(object):
         welcome_ok_btn = self.driver.find_element_by_xpath('//button[text()="OK"]')
         welcome_ok_btn.click()
 
-    # #test 3 - sign in
+    #test 3 - sign in
     # def test_sign_in(self):
     #     self.test_accept_cookies()
     #     sign_in_link = self.driver.find_element_by_xpath('//a[@href="#/login"]')
@@ -67,7 +67,7 @@ class TestConduit(object):
     #         EC.visibility_of_element_located((By.XPATH, '//a[contains(text(),"TKori")]'))
     #     )
     #     assert user_signed_in.is_displayed()
-    #
+
     # # test 4 - list artiles
     # def test_list_articles(self):
     #     self.test_sign_in()
@@ -166,13 +166,13 @@ class TestConduit(object):
     #     update_ok_btn.click()
     #
     # # test 11 - logout
-    # def test_logout(self):
-    #     self.test_sign_in()
-    #     logout_btn = WebDriverWait(self.driver, 10).until(
-    #         EC.visibility_of_element_located((By.CLASS_NAME, "ion-android-exit"))
-    #     )
-    #     logout_btn.click()
-    #     sign_in_link = WebDriverWait(self.driver, 10).until(
-    #         EC.visibility_of_element_located((By.XPATH, '//a[@href="#/login"]'))
-    #     )
-    #     assert sign_in_link.is_displayed()
+    def test_logout(self):
+        conduit_sign_up(self.driver)
+        logout_btn = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, "ion-android-exit"))
+        )
+        logout_btn.click()
+        sign_in_link = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//a[@href="#/login"]'))
+        )
+        assert sign_in_link.is_displayed()
