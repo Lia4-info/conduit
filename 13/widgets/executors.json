@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://Lia4-info.github.io/conduit",
+  "buildOrder" : 13,
+  "buildName" : "GitHub Actions Run #1105515284",
+  "buildUrl" : "https://github.com/Lia4-info/conduit/actions/runs/1105515284",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://Lia4-info.github.io/conduit/13/"
+} ]
