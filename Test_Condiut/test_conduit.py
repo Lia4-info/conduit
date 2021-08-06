@@ -177,3 +177,4 @@ class TestConduit(object):
             EC.visibility_of_element_located((By.XPATH, '//a[@href="#/login"]'))
         )
         assert sign_in_link.is_displayed()
+
