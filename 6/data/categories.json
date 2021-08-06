@@ -1,0 +1,196 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert [<selenium.we...a474249e01\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"945edbf813e23b33255bd3886bc02922\", element=\"d08e7d2f-567d-4fda-80ad-8e6feaecb448\")>\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "test_accept_cookies",
+        "uid" : "fa49691eb5cd5f4e",
+        "parentUid" : "c2adb408f7a14fef62bf2a46773e709f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628242608817,
+          "stop" : 1628242608979,
+          "duration" : 162
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c2adb408f7a14fef62bf2a46773e709f"
+    }, {
+      "name" : "AssertionError: assert [<selenium.we...ef1241d692\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"89fecf76faf94305d448c4111cd5eddf\", element=\"dadd36e5-e7cc-4616-bbb8-7f5af06161e0\")>\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "test_sign_up",
+        "uid" : "152203ffd3532d2c",
+        "parentUid" : "ccd03e165196aa33b03b15c952a6728c",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628242610751,
+          "stop" : 1628242610912,
+          "duration" : 161
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ccd03e165196aa33b03b15c952a6728c"
+    }, {
+      "name" : "AssertionError: assert [<selenium.we...ecfac61036\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"e06a3ae6340e22d48e52ed28b0a505a8\", element=\"097ac0bd-6363-412b-9126-c7270d69dd8c\")>\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "test_list_articles",
+        "uid" : "3dbf4ec6c2c50b4e",
+        "parentUid" : "a48704cdbd7b4b5379fef3b97e46b579",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628242624237,
+          "stop" : 1628242624397,
+          "duration" : 160
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a48704cdbd7b4b5379fef3b97e46b579"
+    }, {
+      "name" : "AssertionError: assert [<selenium.we...8788a5fe79\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"101a061209cda1967aabfa24c5bd079c\", element=\"ae05ebe3-edf4-4d94-beed-928be8bc34a6\")>\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "test_save_data",
+        "uid" : "10750fb33d841e5e",
+        "parentUid" : "7d01a7bd7253ffdb5c0008681b8b1eb0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628242638369,
+          "stop" : 1628242638526,
+          "duration" : 157
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7d01a7bd7253ffdb5c0008681b8b1eb0"
+    }, {
+      "name" : "AssertionError: assert [<selenium.we...ca8f96f623\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"7781f814de49182e8a1d60f233e2f79a\", element=\"894c92b1-b18c-494c-9e8d-65556e9e6fb1\")>\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "test_create_article",
+        "uid" : "552b3c239d292546",
+        "parentUid" : "bf82d88dcd2bc303ae899a4968cfda1a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628242639206,
+          "stop" : 1628242639358,
+          "duration" : 152
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "bf82d88dcd2bc303ae899a4968cfda1a"
+    }, {
+      "name" : "AssertionError: assert [<selenium.we...1ebbe2f5bd\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"515a82df8228327883caaf856f6c0377\", element=\"0d26351b-94ba-40c7-b523-e20f629f4203\")>\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "test_add_comments",
+        "uid" : "925154c2277ba5e3",
+        "parentUid" : "eccbc8073e979e58de15621ef988aaba",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628242641059,
+          "stop" : 1628242641215,
+          "duration" : 156
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "eccbc8073e979e58de15621ef988aaba"
+    }, {
+      "name" : "AssertionError: assert [<selenium.we...67d05af31c\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"b2e325574272852bad21fa9cb4b28b75\", element=\"05874bef-45ac-46cd-8591-433fe7082b79\")>\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "test_delete_article",
+        "uid" : "8726eb650a7dd160",
+        "parentUid" : "ac0ef72c8e3bbfc46b77836f3638e815",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628242642942,
+          "stop" : 1628242643096,
+          "duration" : 154
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ac0ef72c8e3bbfc46b77836f3638e815"
+    }, {
+      "name" : "AssertionError: assert [<selenium.we...0c26f4110e\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"954009767869bfe032c93757e0a1f3f3\", element=\"a85e1d85-e260-4057-aaeb-179f07fea12e\")>\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "test_logout",
+        "uid" : "16ad868c0a19df84",
+        "parentUid" : "47671484596e2bf555eb83555d5a9f8f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628242646580,
+          "stop" : 1628242646734,
+          "duration" : 154
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "47671484596e2bf555eb83555d5a9f8f"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
+      "children" : [ {
+        "name" : "test_sign_in",
+        "uid" : "f6cec61bd7c0ae46",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628242612666,
+          "stop" : 1628242623372,
+          "duration" : 10706
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_paginate",
+        "uid" : "8fe2d8ffaa8ef9ae",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628242626063,
+          "stop" : 1628242636687,
+          "duration" : 10624
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href=\"#/settings\"]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_edit_profile_picture",
+        "uid" : "cb8ce9fe5be54dba",
+        "parentUid" : "af07a78121f8d261844f0d05f775de5a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628242644802,
+          "stop" : 1628242644815,
+          "duration" : 13
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "af07a78121f8d261844f0d05f775de5a"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

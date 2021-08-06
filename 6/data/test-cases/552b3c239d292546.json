@@ -1,0 +1,86 @@
+{
+  "uid" : "552b3c239d292546",
+  "name" : "test_create_article",
+  "fullName" : "Test_Condiut.test_conduit.TestConduit#test_create_article",
+  "historyId" : "ac3841c6da6e73a00b146ee7b63a03ac",
+  "time" : {
+    "start" : 1628242639206,
+    "stop" : 1628242639358,
+    "duration" : 152
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert [<selenium.we...ca8f96f623\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"7781f814de49182e8a1d60f233e2f79a\", element=\"894c92b1-b18c-494c-9e8d-65556e9e6fb1\")>\n  Use -v to get the full diff",
+  "statusTrace" : "self = <test_conduit.TestConduit object at 0x7f3d82f42a90>\n\n    def test_create_article(self):\n>       self.test_sign_in()\n\nTest_Condiut/test_conduit.py:102: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nTest_Condiut/test_conduit.py:58: in test_sign_in\n    self.test_accept_cookies()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <test_conduit.TestConduit object at 0x7f3d82f42a90>\n\n    def test_accept_cookies(self):\n        self.driver.maximize_window()\n        accept_btn = self.driver.find_element_by_xpath('//button[contains(@class,\"accept\")]')\n        accept_btn.click()\n>       assert self.driver.find_elements_by_xpath('//button') == []\nE       assert [<selenium.we...ca8f96f623\")>] == []\nE         Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"7781f814de49182e8a1d60f233e2f79a\", element=\"894c92b1-b18c-494c-9e8d-65556e9e6fb1\")>\nE         Use -v to get the full diff\n\nTest_Condiut/test_conduit.py:33: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert [<selenium.we...ca8f96f623\")>] == []\n  Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"7781f814de49182e8a1d60f233e2f79a\", element=\"894c92b1-b18c-494c-9e8d-65556e9e6fb1\")>\n  Use -v to get the full diff",
+    "statusTrace" : "self = <test_conduit.TestConduit object at 0x7f3d82f42a90>\n\n    def test_create_article(self):\n>       self.test_sign_in()\n\nTest_Condiut/test_conduit.py:102: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nTest_Condiut/test_conduit.py:58: in test_sign_in\n    self.test_accept_cookies()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <test_conduit.TestConduit object at 0x7f3d82f42a90>\n\n    def test_accept_cookies(self):\n        self.driver.maximize_window()\n        accept_btn = self.driver.find_element_by_xpath('//button[contains(@class,\"accept\")]')\n        accept_btn.click()\n>       assert self.driver.find_elements_by_xpath('//button') == []\nE       assert [<selenium.we...ca8f96f623\")>] == []\nE         Left contains 2 more items, first extra item: <selenium.webdriver.remote.webelement.WebElement (session=\"7781f814de49182e8a1d60f233e2f79a\", element=\"894c92b1-b18c-494c-9e8d-65556e9e6fb1\")>\nE         Use -v to get the full diff\n\nTest_Condiut/test_conduit.py:33: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "2a69f341ac3365b5",
+      "name" : "log",
+      "source" : "2a69f341ac3365b5.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "c46ed8887cecd864",
+      "name" : "stderr",
+      "source" : "c46ed8887cecd864.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Test_Condiut"
+  }, {
+    "name" : "suite",
+    "value" : "test_conduit"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestConduit"
+  }, {
+    "name" : "host",
+    "value" : "fv-az83-740"
+  }, {
+    "name" : "thread",
+    "value" : "3756-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "Test_Condiut.test_conduit"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "552b3c239d292546.json",
+  "parameterValues" : [ ]
+}

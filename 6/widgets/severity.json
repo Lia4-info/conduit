@@ -1,0 +1,111 @@
+[ {
+  "uid" : "8fe2d8ffaa8ef9ae",
+  "name" : "test_paginate",
+  "time" : {
+    "start" : 1628242626063,
+    "stop" : 1628242636687,
+    "duration" : 10624
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "10750fb33d841e5e",
+  "name" : "test_save_data",
+  "time" : {
+    "start" : 1628242638369,
+    "stop" : 1628242638526,
+    "duration" : 157
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3dbf4ec6c2c50b4e",
+  "name" : "test_list_articles",
+  "time" : {
+    "start" : 1628242624237,
+    "stop" : 1628242624397,
+    "duration" : 160
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "552b3c239d292546",
+  "name" : "test_create_article",
+  "time" : {
+    "start" : 1628242639206,
+    "stop" : 1628242639358,
+    "duration" : 152
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8726eb650a7dd160",
+  "name" : "test_delete_article",
+  "time" : {
+    "start" : 1628242642942,
+    "stop" : 1628242643096,
+    "duration" : 154
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "925154c2277ba5e3",
+  "name" : "test_add_comments",
+  "time" : {
+    "start" : 1628242641059,
+    "stop" : 1628242641215,
+    "duration" : 156
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "fa49691eb5cd5f4e",
+  "name" : "test_accept_cookies",
+  "time" : {
+    "start" : 1628242608817,
+    "stop" : 1628242608979,
+    "duration" : 162
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "152203ffd3532d2c",
+  "name" : "test_sign_up",
+  "time" : {
+    "start" : 1628242610751,
+    "stop" : 1628242610912,
+    "duration" : 161
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "16ad868c0a19df84",
+  "name" : "test_logout",
+  "time" : {
+    "start" : 1628242646580,
+    "stop" : 1628242646734,
+    "duration" : 154
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "f6cec61bd7c0ae46",
+  "name" : "test_sign_in",
+  "time" : {
+    "start" : 1628242612666,
+    "stop" : 1628242623372,
+    "duration" : 10706
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "cb8ce9fe5be54dba",
+  "name" : "test_edit_profile_picture",
+  "time" : {
+    "start" : 1628242644802,
+    "stop" : 1628242644815,
+    "duration" : 13
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
