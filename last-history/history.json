@@ -9,13 +9,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "5d8af6bc6f176e42",
-      "reportUrl" : "https://Lia4-info.github.io/conduit/17//#testresult/5d8af6bc6f176e42",
+      "uid" : "aa7668f850a7622f",
+      "reportUrl" : "https://Lia4-info.github.io/conduit/18//#testresult/aa7668f850a7622f",
       "status" : "passed",
       "time" : {
-        "start" : 1628356031354,
-        "stop" : 1628356032311,
-        "duration" : 957
+        "start" : 1628356511932,
+        "stop" : 1628356512909,
+        "duration" : 977
       }
     } ]
   },
@@ -29,13 +29,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "1288fc9e125aa204",
-      "reportUrl" : "https://Lia4-info.github.io/conduit/17//#testresult/1288fc9e125aa204",
+      "uid" : "66e50c6e2166f33a",
+      "reportUrl" : "https://Lia4-info.github.io/conduit/18//#testresult/66e50c6e2166f33a",
       "status" : "passed",
       "time" : {
-        "start" : 1628356023145,
-        "stop" : 1628356023227,
-        "duration" : 82
+        "start" : 1628356504038,
+        "stop" : 1628356504102,
+        "duration" : 64
       }
     } ]
   },
@@ -49,13 +49,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "4852b3e900502b6b",
-      "reportUrl" : "https://Lia4-info.github.io/conduit/17//#testresult/4852b3e900502b6b",
+      "uid" : "c0aa286f33610691",
+      "reportUrl" : "https://Lia4-info.github.io/conduit/18//#testresult/c0aa286f33610691",
       "status" : "passed",
       "time" : {
-        "start" : 1628356024877,
-        "stop" : 1628356029610,
-        "duration" : 4733
+        "start" : 1628356505724,
+        "stop" : 1628356510286,
+        "duration" : 4562
       }
     } ]
   }
