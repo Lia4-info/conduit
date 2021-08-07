@@ -31,6 +31,7 @@ class TestConduit(object):
         accept_btn.click()
         cookie_check = self.driver.get_cookie("vue-cookie-accept-decline-cookie-policy-panel")
         assert cookie_check["value"] == "accept"
+
         # assert self.driver.find_elements_by_xpath('//button') == []
 
     # test 2 - sign up
