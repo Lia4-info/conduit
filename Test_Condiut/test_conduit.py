@@ -171,9 +171,10 @@ class TestConduit(object):
     # # test 11 - logout
     def test_logout(self):
         conduit_sign_in(self.driver)
-        logout_btn = WebDriverWait(self.driver, 30).until(
-            EC.visibility_of_element_located((By.XPATH, '//*[@class="nav-link" and contains(text(),"Log out")]'))
-        )
+        logout_btn = driver_wait(self.driver, By.XPATH, '//*[@class="nav-link" and contains(text(),"Log out")]')
+        # logout_btn = WebDriverWait(self.driver, 30).until(
+        #     EC.visibility_of_element_located((By.XPATH, '//*[@class="nav-link" and contains(text(),"Log out")]'))
+        # )
         logout_btn.click()
         sign_in_link = WebDriverWait(self.driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, '//a[@href="#/login"]'))
