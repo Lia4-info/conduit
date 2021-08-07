@@ -32,7 +32,6 @@ class TestConduit(object):
         cookie_check = self.driver.get_cookie("vue-cookie-accept-decline-cookie-policy-panel")
         assert cookie_check["value"] == "accept"
 
-        # assert self.driver.find_elements_by_xpath('//button') == []
 
     # test 2 - sign up
     def test_sign_up(self):
@@ -170,14 +169,14 @@ class TestConduit(object):
     #     update_ok_btn.click()
     #
     # # test 11 - logout
-    # def test_logout(self):
-    #     conduit_sign_up(self.driver)
-    #     logout_btn = WebDriverWait(self.driver, 30).until(
-    #         EC.visibility_of_element_located((By.XPATH, '//*[@class="nav-link" and contains(text(),"Log out")]'))
-    #     )
-    #     logout_btn.click()
-    #     sign_in_link = WebDriverWait(self.driver, 10).until(
-    #         EC.visibility_of_element_located((By.XPATH, '//a[@href="#/login"]'))
-    #     )
-    #     assert sign_in_link.is_displayed()
+    def test_logout(self):
+        conduit_sign_in(self.driver)
+        logout_btn = WebDriverWait(self.driver, 30).until(
+            EC.visibility_of_element_located((By.XPATH, '//*[@class="nav-link" and contains(text(),"Log out")]'))
+        )
+        logout_btn.click()
+        sign_in_link = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//a[@href="#/login"]'))
+        )
+        assert sign_in_link.is_displayed()
 
