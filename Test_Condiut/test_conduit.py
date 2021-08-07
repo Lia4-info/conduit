@@ -32,7 +32,6 @@ class TestConduit(object):
         cookie_check = self.driver.get_cookie("vue-cookie-accept-decline-cookie-policy-panel")
         assert cookie_check["value"] == "accept"
 
-
     # test 2 - sign up
     def test_sign_up(self):
         sign_up_link = self.driver.find_element_by_xpath('//a[@href="#/register"]')
@@ -46,30 +45,23 @@ class TestConduit(object):
         password_input.send_keys("TKoriPass103")
         sign_up_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Sign up")]')
         sign_up_btn.click()
-        welcome = WebDriverWait(self.driver, 10).until(
-            EC.visibility_of_element_located((By.CLASS_NAME, "swal-title"))
-        )
+        welcome = driver_wait(self.driver, By.CLASS_NAME, "swal-title")
         assert welcome.text == "Welcome!"
         welcome_ok_btn = self.driver.find_element_by_xpath('//button[text()="OK"]')
         welcome_ok_btn.click()
 
-    #test 3 - sign in
-    # def test_sign_in(self):
-    #     conduit_sign_up(self.driver)
-    #     conduit_logout(self.driver)
-    #
-    #     sign_in_link = self.driver.find_element_by_xpath('//a[@href="#/login"]')
-    #     sign_in_link.click()
-    #     email_input = self.driver.find_element_by_xpath('//input[@placeholder="Email"]')
-    #     password_input = self.driver.find_element_by_xpath('//input[@placeholder="Password"]')
-    #     email_input.send_keys("tkori103@mail.com")
-    #     password_input.send_keys("TKoriPass103")
-    #     sign_in_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Sign in")]')
-    #     sign_in_btn.click()
-    #     user_signed_in = WebDriverWait(self.driver, 10).until(
-    #         EC.visibility_of_element_located((By.XPATH, '//a[contains(text(),"TKori")]'))
-    #     )
-    #     assert user_signed_in.is_displayed()
+    # test 3 - sign in
+    def test_sign_in(self):
+        sign_in_link = self.driver.find_element_by_xpath('//a[@href="#/login"]')
+        sign_in_link.click()
+        email_input = self.driver.find_element_by_xpath('//input[@placeholder="Email"]')
+        password_input = self.driver.find_element_by_xpath('//input[@placeholder="Password"]')
+        email_input.send_keys("tkori103@mail.com")
+        password_input.send_keys("TKoriPass103")
+        sign_in_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Sign in")]')
+        sign_in_btn.click()
+        user_signed_in = driver_wait(self.driver, By.XPATH, '//a[contains(text(),"TKori")]')
+        assert user_signed_in.is_displayed()
 
     # # test 4 - list articles
     # def test_list_articles(self):
@@ -172,12 +164,6 @@ class TestConduit(object):
     def test_logout(self):
         conduit_sign_in(self.driver)
         logout_btn = driver_wait(self.driver, By.XPATH, '//*[@class="nav-link" and contains(text(),"Log out")]')
-        # logout_btn = WebDriverWait(self.driver, 30).until(
-        #     EC.visibility_of_element_located((By.XPATH, '//*[@class="nav-link" and contains(text(),"Log out")]'))
-        # )
         logout_btn.click()
-        sign_in_link = WebDriverWait(self.driver, 10).until(
-            EC.visibility_of_element_located((By.XPATH, '//a[@href="#/login"]'))
-        )
+        sign_in_link = driver_wait(self.driver, By.XPATH, '//a[@href="#/login"]')
         assert sign_in_link.is_displayed()
-

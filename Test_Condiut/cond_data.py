@@ -39,7 +39,5 @@ def conduit_sign_in(driver):
 
 def conduit_logout(driver):
     conduit_sign_up(driver)
-    logout_btn = WebDriverWait(driver, 15).until(
-        EC.visibility_of_element_located((By.XPATH, '//i[@class="ion-android-exit"]'))
-    )
+    logout_btn = driver_wait(driver, By.XPATH, '//*[@class="nav-link" and contains(text(),"Log out")]')
     logout_btn.click()
