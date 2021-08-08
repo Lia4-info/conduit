@@ -151,3 +151,4 @@ class TestConduit(object):
         logout_btn.click()
         sign_in_link = driver_wait(self.driver, By.XPATH, '//a[@href="#/login"]')
         assert sign_in_link.is_displayed()
+
