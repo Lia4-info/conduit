@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "AttributeError: 'WebDriverWait' object has no attribute 'text'",
+      "children" : [ {
+        "name" : "test_create_article",
+        "uid" : "fe6c4582903c2efb",
+        "parentUid" : "b86f7131f41cf6aa6ba974ab78680c7f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628436206566,
+          "stop" : 1628436208635,
+          "duration" : 2069
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b86f7131f41cf6aa6ba974ab78680c7f"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
