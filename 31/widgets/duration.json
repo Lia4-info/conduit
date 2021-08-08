@@ -1,0 +1,111 @@
+[ {
+  "uid" : "f35763c7976ed0f9",
+  "name" : "test_pagination",
+  "time" : {
+    "start" : 1628442409940,
+    "stop" : 1628442411395,
+    "duration" : 1455
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8a5182f697a101e9",
+  "name" : "test_create_article",
+  "time" : {
+    "start" : 1628442415007,
+    "stop" : 1628442417638,
+    "duration" : 2631
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e5715611b0bf67f8",
+  "name" : "test_delete_article",
+  "time" : {
+    "start" : 1628442423796,
+    "stop" : 1628442429101,
+    "duration" : 5305
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fb99f4903c37b3b7",
+  "name" : "test_edit_profile_picture",
+  "time" : {
+    "start" : 1628442430766,
+    "stop" : 1628442433676,
+    "duration" : 2910
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "266d90178251deda",
+  "name" : "test_accept_cookies",
+  "time" : {
+    "start" : 1628442395432,
+    "stop" : 1628442395511,
+    "duration" : 79
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "107b1cb4a73c97f9",
+  "name" : "test_add_comments",
+  "time" : {
+    "start" : 1628442419283,
+    "stop" : 1628442422106,
+    "duration" : 2823
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "745f4ad308a0cf01",
+  "name" : "test_sign_up",
+  "time" : {
+    "start" : 1628442397163,
+    "stop" : 1628442402711,
+    "duration" : 5548
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "da3bf4818637cbaa",
+  "name" : "test_list_articles",
+  "time" : {
+    "start" : 1628442406919,
+    "stop" : 1628442408278,
+    "duration" : 1359
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "73e2eb3a75875316",
+  "name" : "test_save_data",
+  "time" : {
+    "start" : 1628442413065,
+    "stop" : 1628442413361,
+    "duration" : 296
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b3e1e6f22e5ac90a",
+  "name" : "test_sign_in",
+  "time" : {
+    "start" : 1628442404369,
+    "stop" : 1628442405235,
+    "duration" : 866
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ba03f174ac2ff5b5",
+  "name" : "test_logout",
+  "time" : {
+    "start" : 1628442435308,
+    "stop" : 1628442436343,
+    "duration" : 1035
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
