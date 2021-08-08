@@ -79,7 +79,7 @@ class TestConduit(object):
 
     # # test 6 - save data into file
     # def test_save_data(self):
-    #     self.test_sign_in()
+    #     conduit_sign_in(self.driver)
     #     popular_tags = self.driver.find_elements_by_xpath('//div[a[@class="tag-pill tag-default"]]')
     #     with open('tags.csv', 'w', encoding="UTF-8") as tag_file:
     #         for tag in popular_tags:
@@ -88,7 +88,7 @@ class TestConduit(object):
     #
     # # test 7 - create new article
     # def test_create_article(self):
-    #     self.test_sign_in()
+    #     conduit_sign_in(self.driver)
     #     new_article_link = WebDriverWait(self.driver, 10).until(
     #         EC.visibility_of_element_located((By.XPATH, '//a[@href="#/editor"]'))
     #     )
@@ -135,27 +135,23 @@ class TestConduit(object):
     #     time.sleep(2)
     #     deleted_post_url = self.driver.current_url
     #     assert deleted_post_url == "http://localhost:1667/#/"
-    #
-    # # test 10 - edit profile_picture
-    # def test_edit_profile_picture(self):
-    #     self.test_sign_in()
-    #     settings = self.driver.find_element_by_xpath('//a[@href="#/settings"]')
-    #     settings.click()
-    #     profile_picture_input = WebDriverWait(self.driver, 10).until(
-    #         EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="URL of profile picture"]'))
-    #     )
-    #     profile_picture_input.clear()
-    #     profile_picture_input.send_keys("https://cdn.pixabay.com/photo/2019/02/19/19/45/thumbs-up-4007573__340.png")
-    #     update_settings_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Update Settings")]')
-    #     update_settings_btn.click()
-    #     update_succes = WebDriverWait(self.driver, 10).until(
-    #         EC.visibility_of_element_located((By.CLASS_NAME, "swal-title"))
-    #     )
-    #     assert update_succes.text == "Update successful!"
-    #     update_ok_btn = self.driver.find_element_by_xpath('//button[text()="OK"]')
-    #     update_ok_btn.click()
-    #
-    # # test 11 - logout
+
+    # test 10 - edit profile_picture
+    def test_edit_profile_picture(self):
+        conduit_sign_in(self.driver)
+        settings = self.driver.find_element_by_xpath('//a[@href="#/settings"]')
+        settings.click()
+        profile_picture_input = driver_wait(self.driver, By.XPATH, '//input[@placeholder="URL of profile picture"]')
+        profile_picture_input.clear()
+        profile_picture_input.send_keys("https://cdn.pixabay.com/photo/2019/02/19/19/45/thumbs-up-4007573__340.png")
+        update_settings_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Update Settings")]')
+        update_settings_btn.click()
+        update_succes = driver_wait(self.driver, By.CLASS_NAME, "swal-title")
+        assert update_succes.text == "Update successful!"
+        update_ok_btn = self.driver.find_element_by_xpath('//button[text()="OK"]')
+        update_ok_btn.click()
+
+    # test 11 - logout
     def test_logout(self):
         conduit_sign_in(self.driver)
         logout_btn = driver_wait(self.driver, By.XPATH, '//*[@class="nav-link" and contains(text(),"Log out")]')
