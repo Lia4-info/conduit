@@ -77,15 +77,15 @@ class TestConduit(object):
         page2_check = self.driver.find_elements_by_xpath('//li[@data-test]')[1]
         assert page2_check.get_attribute("class") == "page-item active"
 
-    # # test 6 - save data into file
-    # def test_save_data(self):
-    #     conduit_sign_in(self.driver)
-    #     popular_tags = self.driver.find_elements_by_xpath('//div[a[@class="tag-pill tag-default"]]')
-    #     with open('tags.csv', 'w', encoding="UTF-8") as tag_file:
-    #         for tag in popular_tags:
-    #             tag_file.write(tag.text)
-    #             tag_file.write("\n")
-    #
+    # test 6 - save data into file
+    def test_save_data(self):
+        conduit_sign_in(self.driver)
+        popular_tags = self.driver.find_elements_by_xpath('//div[a[@class="tag-pill tag-default"]]')
+        with open('tags.csv', 'w', encoding="UTF-8") as tag_file:
+            for tag in popular_tags:
+                tag_file.write(tag.text)
+                tag_file.write("\n")
+
     # # test 7 - create new article
     # def test_create_article(self):
     #     conduit_sign_in(self.driver)
