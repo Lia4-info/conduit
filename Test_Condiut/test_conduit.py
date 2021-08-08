@@ -103,24 +103,23 @@ class TestConduit(object):
             enter_tags.send_keys(tag)
             enter_tags.send_keys(Keys.ENTER)
         publish_btn.click()
-        # article1_url = "http://localhost:1667/#/articles/hello-world"
-        # assert self.driver.current_url == article1_url
         article1_title_check = driver_wait(self.driver, By.XPATH, '//h1')
         assert article1_title_check.text == "Hello World!"
 
-    # # test 8 - add comments to article
-    # def test_add_comments(self):
-    #     self.test_create_article()
-    #     comment_text = self.driver.find_element_by_xpath('//textarea[@placeholder="Write a comment..."]')
-    #     post_comment_btn = self.driver.find_element_by_xpath('//button[text()="Post Comment"]')
-    #     with open('comments.txt', 'r', encoding='UTF-8') as comments:
-    #         for row in comments:
-    #             comment_text.send_keys(row)
-    #             post_comment_btn.click()
-    #     comment_list = self.driver.find_elements_by_class_name("card-text")
-    #     assert comment_list != []
-    #
-    #
+    # test 8 - add comments to article
+    def test_add_comments(self):
+        conduit_sign_in(self.driver)
+        conduit_new_article(self.driver)
+        comment_text = self.driver.find_element_by_xpath('//textarea[@placeholder="Write a comment..."]')
+        post_comment_btn = self.driver.find_element_by_xpath('//button[text()="Post Comment"]')
+        with open('comments.txt', 'r', encoding='UTF-8') as comments:
+            for row in comments:
+                comment_text.send_keys(row)
+                post_comment_btn.click()
+        comment_list = self.driver.find_elements_by_class_name("card-text")
+        assert comment_list != []
+
+
     # # test 9 - delete article
     # def test_delete_article(self):
     #     self.test_create_article()

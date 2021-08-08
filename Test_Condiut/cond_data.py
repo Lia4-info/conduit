@@ -1,8 +1,9 @@
 import time
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from article_generator import article1_title, article1_about, article1_text, article1_tags
+from selenium.webdriver.common.keys import Keys
 
 def driver_wait(driver, by, value):
     element = WebDriverWait(driver, 30).until(
@@ -41,3 +42,19 @@ def conduit_logout(driver):
     conduit_sign_up(driver)
     logout_btn = driver_wait(driver, By.XPATH, '//*[@class="nav-link" and contains(text(),"Log out")]')
     logout_btn.click()
+
+def conduit_new_article(driver):
+    new_article_link = driver_wait(driver, By.XPATH, '//a[@href="#/editor"]')
+    new_article_link.click()
+    article_title = driver_wait(driver, By.XPATH, '//input[@placeholder="Article Title"]')
+    article_about = driver.find_element_by_xpath('//input[@placeholder="What\'s this article about?"]')
+    article_text = driver.find_element_by_xpath('//textarea[@placeholder="Write your article (in markdown)"]')
+    enter_tags = driver.find_element_by_xpath('//input[@placeholder="Enter tags"]')
+    publish_btn = driver.find_element_by_xpath('//button[contains(text(),"Publish")]')
+    article_title.send_keys(article1_title)
+    article_about.send_keys(article1_about)
+    article_text.send_keys(article1_text)
+    for tag in article1_tags:
+        enter_tags.send_keys(tag)
+        enter_tags.send_keys(Keys.ENTER)
+    publish_btn.click()
