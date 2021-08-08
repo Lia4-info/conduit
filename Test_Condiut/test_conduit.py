@@ -105,7 +105,7 @@ class TestConduit(object):
         publish_btn.click()
         # article1_url = "http://localhost:1667/#/articles/hello-world"
         # assert self.driver.current_url == article1_url
-        article1_title_check = WebDriverWait(self.driver, By.XPATH, '//h1')
+        article1_title_check = driver_wait(self.driver, By.XPATH, '//h1')
         assert article1_title_check.text == "Hello World!"
 
     # # test 8 - add comments to article
