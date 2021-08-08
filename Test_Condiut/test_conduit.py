@@ -110,7 +110,7 @@ class TestConduit(object):
     def test_add_comments(self):
         conduit_sign_in(self.driver)
         conduit_new_article(self.driver)
-        comment_text = self.driver.find_element_by_xpath('//textarea[@placeholder="Write a comment..."]')
+        comment_text = driver_wait(self.driver, By.XPATH, '//textarea[@placeholder="Write a comment..."]')
         post_comment_btn = self.driver.find_element_by_xpath('//button[text()="Post Comment"]')
         with open('comments.txt', 'r', encoding='UTF-8') as comments:
             for row in comments:
