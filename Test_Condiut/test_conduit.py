@@ -86,34 +86,28 @@ class TestConduit(object):
                 tag_file.write(tag.text)
                 tag_file.write("\n")
 
-    # # test 7 - create new article
-    # def test_create_article(self):
-    #     conduit_sign_in(self.driver)
-    #     new_article_link = WebDriverWait(self.driver, 10).until(
-    #         EC.visibility_of_element_located((By.XPATH, '//a[@href="#/editor"]'))
-    #     )
-    #     new_article_link.click()
-    #     article_title = WebDriverWait(self.driver, 10).until(
-    #         EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]'))
-    #     )
-    #     article_about = self.driver.find_element_by_xpath('//input[@placeholder="What\'s this article about?"]')
-    #     article_text = self.driver.find_element_by_xpath('//textarea[@placeholder="Write your article (in markdown)"]')
-    #     enter_tags = self.driver.find_element_by_xpath('//input[@placeholder="Enter tags"]')
-    #     publish_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]')
-    #     article_title.send_keys(article1_title)
-    #     article_about.send_keys(article1_about)
-    #     article_text.send_keys(article1_text)
-    #     for tag in article1_tags:
-    #         enter_tags.send_keys(tag)
-    #         enter_tags.send_keys(Keys.ENTER)
-    #     publish_btn.click()
-    #     # article1_url = "http://localhost:1667/#/articles/hello-world"
-    #     # assert self.driver.current_url == article1_url
-    #     article1_title_check = WebDriverWait(self.driver, 10).until(
-    #         EC.visibility_of_element_located((By.XPATH, '//h1'))
-    #     )
-    #     assert article1_title_check.text == "Hello World!"
-    #
+    # test 7 - create new article
+    def test_create_article(self):
+        conduit_sign_in(self.driver)
+        new_article_link = driver_wait(self.driver, By.XPATH, '//a[@href="#/editor"]')
+        new_article_link.click()
+        article_title = driver_wait(self.driver, By.XPATH, '//input[@placeholder="Article Title"]')
+        article_about = self.driver.find_element_by_xpath('//input[@placeholder="What\'s this article about?"]')
+        article_text = self.driver.find_element_by_xpath('//textarea[@placeholder="Write your article (in markdown)"]')
+        enter_tags = self.driver.find_element_by_xpath('//input[@placeholder="Enter tags"]')
+        publish_btn = self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]')
+        article_title.send_keys(article1_title)
+        article_about.send_keys(article1_about)
+        article_text.send_keys(article1_text)
+        for tag in article1_tags:
+            enter_tags.send_keys(tag)
+            enter_tags.send_keys(Keys.ENTER)
+        publish_btn.click()
+        # article1_url = "http://localhost:1667/#/articles/hello-world"
+        # assert self.driver.current_url == article1_url
+        article1_title_check = WebDriverWait(self.driver, By.XPATH, '//h1')
+        assert article1_title_check.text == "Hello World!"
+
     # # test 8 - add comments to article
     # def test_add_comments(self):
     #     self.test_create_article()
