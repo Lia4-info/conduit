@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Aug 08 14:44:16 GMT 2021","Sun Aug 08 14:44:17 GMT 2021","869","Test_Condiut","test_conduit","TestConduit","","","test_sign_in",""
+"passed","Sun Aug 08 14:44:22 GMT 2021","Sun Aug 08 14:44:23 GMT 2021","1444","Test_Condiut","test_conduit","TestConduit","","","test_pagination",""
+"passed","Sun Aug 08 14:44:08 GMT 2021","Sun Aug 08 14:44:08 GMT 2021","88","Test_Condiut","test_conduit","TestConduit","","","test_accept_cookies",""
+"broken","Sun Aug 08 14:44:25 GMT 2021","Sun Aug 08 14:44:25 GMT 2021","317","Test_Condiut","test_conduit","TestConduit","","","test_edit_profile_picture",""
+"passed","Sun Aug 08 14:44:19 GMT 2021","Sun Aug 08 14:44:20 GMT 2021","1366","Test_Condiut","test_conduit","TestConduit","","","test_list_articles",""
+"passed","Sun Aug 08 14:44:27 GMT 2021","Sun Aug 08 14:44:28 GMT 2021","1019","Test_Condiut","test_conduit","TestConduit","","","test_logout",""
+"passed","Sun Aug 08 14:44:09 GMT 2021","Sun Aug 08 14:44:15 GMT 2021","5297","Test_Condiut","test_conduit","TestConduit","","","test_sign_up",""
