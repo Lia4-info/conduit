@@ -67,19 +67,16 @@ class TestConduit(object):
     def test_list_articles(self):
         conduit_sign_in(self.driver)
         article_list = driver_wait(self.driver, By.XPATH, '//a[@class="preview-link"]')
-        # article_list = self.driver.find_elements_by_class_name("preview-link")
         assert article_list != []
 
-    # # test 5 - paginate
-    # def test_paginate(self):
-    #     self.test_sign_in()
-    #     page_link2 = driver_wait(self.driver, By.ID, "idname") WebDriverWait(self.driver, 10).until(
-    #         EC.visibility_of_element_located((By.XPATH, '//a[text()="2"]'))
-    #     )
-    #     page_link2.click()
-    #     page2_check = self.driver.find_elements_by_xpath('//li[@data-test]')[1]
-    #     assert page2_check.get_attribute("class") == "page-item active"
-    #
+    # test 5 - paginate
+    def test_pagination(self):
+        conduit_sign_in(self.driver)
+        page_link2 = driver_wait(self.driver, By.XPATH, '//a[text()="2"]')
+        page_link2.click()
+        page2_check = self.driver.find_elements_by_xpath('//li[@data-test]')[1]
+        assert page2_check.get_attribute("class") == "page-item active"
+
     # # test 6 - save data into file
     # def test_save_data(self):
     #     self.test_sign_in()
