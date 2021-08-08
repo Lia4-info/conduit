@@ -112,7 +112,7 @@ class TestConduit(object):
         conduit_new_article(self.driver)
         comment_text = driver_wait(self.driver, By.XPATH, '//textarea[@placeholder="Write a comment..."]')
         post_comment_btn = self.driver.find_element_by_xpath('//button[text()="Post Comment"]')
-        with open('C:\\Users\\Kornélia\\PycharmProjects\\conduit\\Test_Condiut\\comments.txt', 'r', encoding='UTF-8') as comments:
+        with open('comments.txt', 'r', encoding='UTF-8') as comments:
             for row in comments:
                 comment_text.send_keys(row)
                 post_comment_btn.click()
