@@ -1,0 +1,86 @@
+{
+  "uid" : "75068eab61f4e254",
+  "name" : "test_add_comments",
+  "fullName" : "Test_Condiut.test_conduit.TestConduit#test_add_comments",
+  "historyId" : "ad4ffc3c2032a3e26ebb62c01de93bf7",
+  "time" : {
+    "start" : 1628438781414,
+    "stop" : 1628438784359,
+    "duration" : 2945
+  },
+  "status" : "broken",
+  "statusMessage" : "FileNotFoundError: [Errno 2] No such file or directory: 'comments.txt'",
+  "statusTrace" : "self = <test_conduit.TestConduit object at 0x7fa91bf99be0>\n\n    def test_add_comments(self):\n        conduit_sign_in(self.driver)\n        conduit_new_article(self.driver)\n        comment_text = driver_wait(self.driver, By.XPATH, '//textarea[@placeholder=\"Write a comment...\"]')\n        post_comment_btn = self.driver.find_element_by_xpath('//button[text()=\"Post Comment\"]')\n>       with open('comments.txt', 'r', encoding='UTF-8') as comments:\nE       FileNotFoundError: [Errno 2] No such file or directory: 'comments.txt'\n\nTest_Condiut/test_conduit.py:115: FileNotFoundError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "FileNotFoundError: [Errno 2] No such file or directory: 'comments.txt'",
+    "statusTrace" : "self = <test_conduit.TestConduit object at 0x7fa91bf99be0>\n\n    def test_add_comments(self):\n        conduit_sign_in(self.driver)\n        conduit_new_article(self.driver)\n        comment_text = driver_wait(self.driver, By.XPATH, '//textarea[@placeholder=\"Write a comment...\"]')\n        post_comment_btn = self.driver.find_element_by_xpath('//button[text()=\"Post Comment\"]')\n>       with open('comments.txt', 'r', encoding='UTF-8') as comments:\nE       FileNotFoundError: [Errno 2] No such file or directory: 'comments.txt'\n\nTest_Condiut/test_conduit.py:115: FileNotFoundError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "26ee7700b806de3",
+      "name" : "log",
+      "source" : "26ee7700b806de3.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "ae0f0434d5dc0c0",
+      "name" : "stderr",
+      "source" : "ae0f0434d5dc0c0.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Test_Condiut"
+  }, {
+    "name" : "suite",
+    "value" : "test_conduit"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestConduit"
+  }, {
+    "name" : "host",
+    "value" : "fv-az83-740"
+  }, {
+    "name" : "thread",
+    "value" : "3754-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "Test_Condiut.test_conduit"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "75068eab61f4e254.json",
+  "parameterValues" : [ ]
+}
