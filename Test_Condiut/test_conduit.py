@@ -112,7 +112,7 @@ class TestConduit(object):
         conduit_new_article(self.driver)
         comment_text = driver_wait(self.driver, By.XPATH, '//textarea[@placeholder="Write a comment..."]')
         post_comment_btn = self.driver.find_element_by_xpath('//button[text()="Post Comment"]')
-        with open('comments.txt', 'r', encoding='UTF-8') as comments:
+        with open('C:\\Users\\Kornélia\\PycharmProjects\\conduit\\Test_Condiut\\comments.txt', 'r', encoding='UTF-8') as comments:
             for row in comments:
                 comment_text.send_keys(row)
                 post_comment_btn.click()
@@ -120,14 +120,15 @@ class TestConduit(object):
         assert comment_list != []
 
 
-    # # test 9 - delete article
-    # def test_delete_article(self):
-    #     self.test_create_article()
-    #     delete_icon = self.driver.find_element_by_class_name("ion-trash-a")
-    #     delete_icon.click()
-    #     time.sleep(2)
-    #     deleted_post_url = self.driver.current_url
-    #     assert deleted_post_url == "http://localhost:1667/#/"
+    # test 9 - delete article
+    def test_delete_article(self):
+        conduit_sign_in(self.driver)
+        conduit_new_article(self.driver)
+        delete_icon = driver_wait(self.driver, By.CLASS_NAME, "ion-trash-a")
+        delete_icon.click()
+        time.sleep(3)
+        deleted_post_url = self.driver.current_url
+        assert deleted_post_url == "http://localhost:1667/#/"
 
     # test 10 - edit profile_picture
     def test_edit_profile_picture(self):
