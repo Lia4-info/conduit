@@ -139,7 +139,7 @@ class TestConduit(object):
     # test 10 - edit profile_picture
     def test_edit_profile_picture(self):
         conduit_sign_in(self.driver)
-        settings = self.driver.find_element_by_xpath('//a[@href="#/settings"]')
+        settings = driver_wait(self.driver, By.XPATH, '//a[@href="#/settings"]')
         settings.click()
         profile_picture_input = driver_wait(self.driver, By.XPATH, '//input[@placeholder="URL of profile picture"]')
         profile_picture_input.clear()
