@@ -63,15 +63,13 @@ class TestConduit(object):
         user_signed_in = driver_wait(self.driver, By.XPATH, '//a[contains(text(),"TKori")]')
         assert user_signed_in.is_displayed()
 
-    # # test 4 - list articles
-    # def test_list_articles(self):
-    #     self.test_sign_in()
-    #     article_list = WebDriverWait(self.driver, 10).until(
-    #         EC.visibility_of_element_located((By.XPATH, '//a[@class="preview-link"]'))
-    #     )
-    #     article_list = self.driver.find_elements_by_class_name("preview-link")
-    #     assert article_list != []
-    #
+    # test 4 - list articles
+    def test_list_articles(self):
+        conduit_sign_in(self.driver)
+        article_list = driver_wait(self.driver, By.XPATH, '//a[@class="preview-link"]')
+        # article_list = self.driver.find_elements_by_class_name("preview-link")
+        assert article_list != []
+
     # # test 5 - paginate
     # def test_paginate(self):
     #     self.test_sign_in()
