@@ -24,8 +24,7 @@ def conduit_sign_up(driver):
     email_input.send_keys("tkori103@mail.com")
     password_input.send_keys("TKoriPass103")
     sign_up_btn.click()
-    time.sleep(3)
-    welcome_ok_btn = driver.find_element_by_xpath('//button[text()="OK"]')
+    welcome_ok_btn = driver_wait(driver, By.XPATH, '//button[text()="OK"]')
     welcome_ok_btn.click()
 
 def conduit_sign_in(driver):

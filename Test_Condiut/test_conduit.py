@@ -2,7 +2,6 @@ import time
 import pytest
 from selenium import webdriver
 from datetime import datetime
-from email_generator import username, email, password
 from article_generator import article1_title, article1_about, article1_text, article1_tags
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -19,7 +18,6 @@ class TestConduit(object):
         browser_options = Options()
         browser_options.headless = True
         self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
-        # self.driver = webdriver.Chrome("C:\\Users\\Kornélia\\Desktop\\PM Automata Tesztelő\\chromedriver_win32\\chromedriver.exe")
         self.driver.get("http://localhost:1667/")
 
     def teardown(self):
