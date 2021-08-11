@@ -117,7 +117,6 @@ class TestConduit(object):
         comment_list = self.driver.find_elements_by_class_name("card-text")
         assert comment_list != []
 
-
     # test 9 - delete article
     def test_delete_article(self):
         conduit_sign_in(self.driver)
